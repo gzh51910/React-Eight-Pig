@@ -1,46 +1,127 @@
 import React, { Component } from 'react';
+import { Route, Redirect, Switch, Link, NavLink, withRouter } from 'react-router-dom';
 import './common/css/app/app.scss'
+import imgURL from './common/img/shouye2.svg';
+import imgURL4 from './common/img/shouye1.svg';
+import imgURL1 from './common/img/faxian.svg';
+import imgURL5 from './common/img/faxian1.svg';
+import imgURL2 from './common/img/xiaoxi.svg';
+import imgURL6 from './common/img/xiaoxi1.svg';
+import imgURL3 from './common/img/wode.svg';
+import imgURL7 from './common/img/wode1.svg';
 
 
+
+import Home from '~/home/home';
+import Discover from '~/discover/discover';
+import news from '~/news/news';
+// import Reg from '~/Reg';
+// import Login from '~/Login';
+import Mine from '~/mine/mine';
+// import Goods from '~/Goods';
 class App extends Component {
     state = {
         currentPath: '/home',
+        isActive: false,
         menu: [
             {
+                isActive: true,
                 name: 'home',
                 path: '/home',
-                icon: 'home',
-                text: '首页'
+                src: imgURL,
+                src1: imgURL4,
+                text: '首页',
+
             }, {
+                isActive: false,
                 name: 'discover',
                 path: '/discover',
-                icon: 'compass',
+                src: imgURL1,
+                src1: imgURL5,
                 text: '发现'
             },
             {
+                isActive: false,
                 name: '消息',
                 path: '/news',
-                icon: 'shopping-cart',
+                src: imgURL2,
+                src1: imgURL6,
                 text: '购物车'
             }, {
+                isActive: false,
                 name: 'mine',
                 path: '/mine',
-                icon: 'user',
+                src: imgURL3,
+                src1: imgURL7,
                 text: '我的'
             },
         ]
+    }
+
+    goto = (path, idx) => {
+
+        let { history } = this.props;
+        history.push(path)
+        let list = this.state.menu.map((item, index) => {
+            if (index === idx) {
+                item.isActive = true
+            }
+            return item
+        })
+        this.setState({
+            menu: list
+        })
+    }
+    componentDidUpdate(prevProps, nextProps) {
+        if (this.props.location.pathname !== prevProps.location.pathname) {
+            var list = this.state.menu.map((item) => {
+                if (this.props.location.pathname !== item.path) {
+                    item.isActive = false
+                }
+                return item
+            })
+            this.setState({
+                menu: list
+            })
+        }
+
     }
     render() {
 
         return (
             <div>
-                <span>首页</span>
-                <svg className="icon" width="200px" height="200px" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg"><path fill="#a1a1a1" d="M512 0.597333c282.453333 0 511.402667 228.977778 511.402667 511.402667 0 282.453333-228.977778 511.402667-511.402667 511.402667C229.546667 1023.402667 0.597333 794.424889 0.597333 512 0.597333 229.546667 229.575111 0.597333 512 0.597333z m220.672 265.159111h-6.4L419.441778 342.471111a102.286222 102.286222 0 0 0-74.410667 74.410667L268.316444 724.992a25.571556 25.571556 0 0 0 25.571556 31.971556h6.4l308.110222-76.714667a102.286222 102.286222 0 0 0 74.410667-74.410667l76.714667-308.110222a25.571556 25.571556 0 0 0-25.6-31.971556h-1.251556zM512 473.656889a38.343111 38.343111 0 1 1 0 76.686222 38.343111 38.343111 0 0 1 0-76.686222z" /></svg>
+                <div className="nav">
+                    {
+                        this.state.menu.map((item, index) => {
+                            return <figure key={item.path} onClick={this.goto.bind(this, item.path, index)}>
+                                <img className="icon" src={item.isActive ? item.src1 : item.src} />
+                                <figcaption style={item.isActive ? { color: '#ff5e69' } : {}}>
+                                    {item.text}
+                                </figcaption>
+                            </figure>
+                        })
+                    }
+
+
+                </div>
+
+                <Switch>
+                    <Route path="/home" component={Home} />
+                    <Route path="/discover" component={Discover} />
+                    <Route path="/news" component={news} />
+                    {/* <Route path="/reg" component={Reg} /> */}
+                    {/* <Route path="/login" component={Login} /> */}
+                    <Route path="/mine" component={Mine} />
+                    {/* <Route path="/goods/:id" component={Goods} /> */}
+                    <Route path="/notfound" render={() => <div>404页面</div>} />
+                    <Redirect from="/" to="/home" exact />
+                    <Redirect to="/notfound" />
+                </Switch>
 
             </div>
         )
     }
 }
 
-
+App = withRouter(App);
 export default App;

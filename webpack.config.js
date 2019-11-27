@@ -11,7 +11,7 @@ module.exports = {
         alias: {
             '@': path.join(__dirname, './src'),
             '@@': path.join(__dirname, './src/components'),
-            '~': path.join(__dirname, './src/pages')
+            '~': path.join(__dirname, './src/views')
         }
     },
     module: {
@@ -39,8 +39,8 @@ module.exports = {
             },
             {
                 test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,
-                use:[ 'url-loader'],
-              
+                use: ['url-loader'],
+
             },
 
             // css加载器
