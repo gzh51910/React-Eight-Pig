@@ -15,9 +15,8 @@ import imgURL7 from './common/img/home/wode1.svg';
 import Home from '~/home/home';
 import Discover from '~/discover/discover';
 import news from '~/news/news';
-import Tsdr from '~/tsdr/tedr'
-// import Reg from '~/Reg';
-// import Login from '~/Login';
+import Reg from '~/reg/reg';
+import Login from '~/login/login';
 import Mine from '~/mine/mine';
 // import Goods from '~/Goods';
 class App extends Component {
@@ -111,8 +110,8 @@ class App extends Component {
                     <Route path="/tsdr" component={Tsdr} />
                     <Route path="/discover" component={Discover} />
                     <Route path="/news" component={news} />
-                    {/* <Route path="/reg" component={Reg} /> */}
-                    {/* <Route path="/login" component={Login} /> */}
+                    <Route path="/reg" component={Reg} />
+                    <Route path="/login" component={Login} />
                     <Route path="/mine" component={Mine} />
                     {/* <Route path="/goods/:id" component={Goods} /> */}
                     <Route path="/notfound" render={() => <div>404页面</div>} />
