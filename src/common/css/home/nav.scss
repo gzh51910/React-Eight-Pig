@@ -1,0 +1,32 @@
+.navhome{
+    display: flex;
+    align-items: center;
+    height: 1.2rem;
+    border-bottom: 1px solid #ccc;
+    border-top: 1px solid #ccc;
+    li{
+        height: 100%;
+        line-height: 1.2rem ;
+        flex: 1;
+        font-size: .37333rem;
+        text-align: center;
+        color: #888;
+        position: relative;
+        &:not(:last-child):after {
+            content: "";
+            width: .02667rem;
+            background-color: #ccc;
+            position: absolute;
+            right: 0;
+            top: 20%;
+            bottom: 20%;
+        }
+        .sj{
+            fill: #888;
+            width: .21333rem;
+            height: .42667rem;
+            margin-left: .08rem;
+            vertical-align: middle;
+        }
+    }
+}

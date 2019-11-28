@@ -8,6 +8,7 @@ class news extends Component {
         return (
             <div>
                 news
+
             </div>
         )
     }

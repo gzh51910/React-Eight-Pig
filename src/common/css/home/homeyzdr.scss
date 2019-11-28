@@ -1,0 +1,85 @@
+.homeyzdr{
+    padding: 0 .48rem;
+    .titleBox{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .title{
+            font-size: .56rem;
+            font-weight: 700;
+            // line-height: 1;
+            color: #333;
+        }
+        span{
+            margin-right: .16rem;
+            font-size: .37333rem;
+            color: #888;
+        } 
+    }
+    .g-list-wrap{
+        width: 100%;
+        padding-top: .48rem;
+        .g-list{
+            overflow: auto;
+            display: flex;
+            width: 100%;
+            figure{
+                width: 50%;
+                padding-right: .24rem;
+                position: relative;
+                img{
+                    height: 4.4rem;
+                }
+                .g-tag{
+                    position: absolute;
+                    left: .24rem;
+                    bottom: 2.64rem;
+                    padding: .16rem .24rem;
+                    background-color: #fff;
+                    border-radius: .16rem;
+                    text-align: center;
+                    line-height: .45333rem;
+                    font-size: .32rem;
+                    color: #333;
+                }
+                figcaption{
+                    h3{
+                        font-size: .37333rem;
+                        font-weight: 400;
+                        color: #000;
+                    }
+                    p{
+                        color: #888;
+                        white-space: normal;
+                        word-break: break-all;
+                        display: -webkit-box;
+                        -webkit-box-orient: vertical;
+                        -webkit-line-clamp: 2;
+                        font-size: .37333rem;
+                        line-height: 1.5;
+                    }
+                }
+            }
+        }
+    }
+    .feature{
+       .feature-list{
+           display: flex;
+           li{
+               flex: 1;
+               text-align: center;
+           }
+           .svg{
+            width: .96rem;
+            height: .96rem;
+           }
+           .desc{
+            width: 2.50667rem;
+            margin: .08rem auto 0;
+            font-size: .32rem;
+            color: #888;
+           }
+       } 
+    }
+
+}

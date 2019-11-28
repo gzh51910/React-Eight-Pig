@@ -1,0 +1,28 @@
+.homefoot{
+    background-color: #333;
+    padding: .26667rem 0 .4rem;
+    height: 2.72rem;
+    .footlist{
+        display: flex;
+        li{
+            flex: 1;
+            text-align: center;
+            color: #fff;
+            font-size: .37333rem;
+        }
+     
+      
+    }
+    .license{
+        margin-top: .26667rem;
+        font-size: .26667rem;
+        text-align: center;
+        color: #888;
+    }
+    .copyRight{
+        margin-top: .34667rem;
+        font-size: .32rem;
+        text-align: center;
+        color: #888;
+    }
+}

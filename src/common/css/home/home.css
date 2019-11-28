@@ -1,0 +1,9 @@
+.home {
+  display: flex;
+  flex-direction: column;
+}
+
+.home .homeMain {
+  height: 14.8rem;
+  overflow: auto;
+}

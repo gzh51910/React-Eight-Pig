@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+
 class Discover extends Component {
 
     render() {
@@ -6,6 +7,7 @@ class Discover extends Component {
         return (
             <div>
                 <h1>111</h1>
+
             </div >
         )
     }

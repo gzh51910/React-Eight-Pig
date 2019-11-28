@@ -8,6 +8,7 @@ class Mine extends Component {
         return (
             <div>
                 Mine
+
             </div>
         )
     }
