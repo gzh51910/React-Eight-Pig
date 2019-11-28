@@ -1,20 +1,21 @@
 import React, { Component } from 'react';
 import { Route, Redirect, Switch, Link, NavLink, withRouter } from 'react-router-dom';
 import './common/css/app/app.scss'
-import imgURL from './common/img/shouye2.svg';
-import imgURL4 from './common/img/shouye1.svg';
-import imgURL1 from './common/img/faxian.svg';
-import imgURL5 from './common/img/faxian1.svg';
-import imgURL2 from './common/img/xiaoxi.svg';
-import imgURL6 from './common/img/xiaoxi1.svg';
-import imgURL3 from './common/img/wode.svg';
-import imgURL7 from './common/img/wode1.svg';
+import imgURL from './common/img/home/shouye2.svg';
+import imgURL4 from './common/img/home/shouye1.svg';
+import imgURL1 from './common/img/home/faxian.svg';
+import imgURL5 from './common/img/home/faxian1.svg';
+import imgURL2 from './common/img/home/xiaoxi.svg';
+import imgURL6 from './common/img/home/xiaoxi1.svg';
+import imgURL3 from './common/img/home/wode.svg';
+import imgURL7 from './common/img/home/wode1.svg';
 
 
 
 import Home from '~/home/home';
 import Discover from '~/discover/discover';
 import news from '~/news/news';
+import Tsdr from '~/tsdr/tedr'
 // import Reg from '~/Reg';
 // import Login from '~/Login';
 import Mine from '~/mine/mine';
@@ -46,7 +47,7 @@ class App extends Component {
                 path: '/news',
                 src: imgURL2,
                 src1: imgURL6,
-                text: '购物车'
+                text: '消息'
             }, {
                 isActive: false,
                 name: 'mine',
@@ -107,6 +108,7 @@ class App extends Component {
 
                 <Switch>
                     <Route path="/home" component={Home} />
+                    <Route path="/tsdr" component={Tsdr} />
                     <Route path="/discover" component={Discover} />
                     <Route path="/news" component={news} />
                     {/* <Route path="/reg" component={Reg} /> */}
