@@ -1,4 +1,73 @@
-h1{
+.wrap{
+    padding: .333333rem;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: .866667rem;
+}
+.navWrap{
+    display: flex;
+    height: 1.16rem;
+    top: 0;
+    justify-content: space-around;
+    margin-bottom: .266667rem;
+    border-bottom: .013333rem solid #ccc;
+    li{
+        font-size: .373333rem;
+        line-height: 1.16rem;
+        color: #000;
+        
+    }
+}
+.mainWrap{
+    // flex:1;
+    height: 14.633333rem;
+    overflow: auto;
+}
+
+.travelwrap{
+  display: flex;
+  flex-direction: column;
   
-    font-size: 1.666667rem;
+}
+.story{
+    height: 8.293333rem;
+    width: 100%;
+    display: flex;
+    overflow: auto;
+    figure{
+        width:4.4rem;
+        margin-right: .2rem;
+        img{
+            height: 5.866667rem;
+        }
+        figcaption{
+            font-size: .426667rem
+        }
+    }
+}
+.news{
+    height: 5.84rem;
+    width: 100%;
+    display: flex;
+    overflow: auto;
+    figure{
+        width: 8rem;
+        margin-right: .2rem;
+        img{
+            height: 4.506667rem;
+        }
+        figcaption{
+            font-size: .426667rem
+        }
+    }
+}
+.tab-active{
+    border-bottom: .04rem solid #ff5e69;
+}
+.video-box{
+    height: 5.08rem;
+    position: relative;
+    .Imgnone{
+        display: none;
+    }
 }
