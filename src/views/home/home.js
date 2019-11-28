@@ -5,7 +5,7 @@ import Homeactlist from './catlist'
 import Homeyzdr from './yzdr'
 import Homeguide from './homeguide'
 import Homemore from './homeMore'
-import Homefoot from './Homefoot'
+import Homefoot from './homefoot'
 
 import '../../common/css/home/home.scss'
 class Home extends Component {
