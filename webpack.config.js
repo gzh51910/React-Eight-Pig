@@ -4,7 +4,7 @@ module.exports = {
     entry: './src/main.js',
     devServer: {
         contentBase: path.join(__dirname, './public'),
-        port: 8000
+        port: 8010
     },
     resolve: {
         // 别名
