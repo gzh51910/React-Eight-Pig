@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Carousel } from 'antd';
+import '../../common/css/home/homeSlider.scss'
 class homeNav extends Component {
     state = {
         list: [

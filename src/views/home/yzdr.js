@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import '../../common/css/home/homeyzdr.scss'
+import { Route, Redirect, Switch, Link, NavLink, withRouter } from 'react-router-dom';
 import { Icon } from 'antd';
 import { my } from '../../api'
 class homeyzdr extends Component {
@@ -20,6 +21,11 @@ class homeyzdr extends Component {
         })
 
     }
+    goto =(id) => { 
+        let { history } = this.props;
+            console.log(this.props);
+            history.push(`/yzdr/${id}`)
+    }
     render() {
 
         return (
@@ -33,7 +39,7 @@ class homeyzdr extends Component {
                 <article className="g-list-wrap">
                     <ul className='g-list'>
                         {this.state.list.map(item => {
-                            return <figure key={item.src}>
+                            return <figure key={item.src} onClick={this.goto.bind(this,item._id)}>
                                 <img src={item.src} />
                                 <span className="g-tag">{item.tag}</span>
                                 <figcaption>
@@ -67,5 +73,5 @@ class homeyzdr extends Component {
         )
     }
 }
-
+homeyzdr = withRouter(homeyzdr);
 export default homeyzdr;

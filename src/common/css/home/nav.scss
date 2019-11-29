@@ -12,15 +12,15 @@
         text-align: center;
         color: #888;
         position: relative;
-        &:not(:last-child):after {
-            content: "";
-            width: .02667rem;
-            background-color: #ccc;
-            position: absolute;
-            right: 0;
-            top: 20%;
-            bottom: 20%;
-        }
+        // &:not(:last-child):after {
+        //     content: "";
+        //     width: .02667rem;
+        //     background-color: #ccc;
+        //     position: absolute;
+        //     right: 0;
+        //     top: 20%;
+        //     bottom: 20%;
+        // }
         .sj{
             fill: #888;
             width: .21333rem;
