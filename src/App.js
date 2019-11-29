@@ -15,7 +15,9 @@ import imgURL7 from './common/img/home/wode1.svg';
 import Home from '~/home/home';
 import Discover from '~/discover/discover';
 import news from '~/news/news';
-import Tsdr from '~/tsdr/tedr'
+import Tsdr from '~/tsdr/tedr';
+import Air from '~/tsdr/air';
+import Car from '~/tsdr/car';
 // import Reg from '~/Reg';
 // import Login from '~/Login';
 import Mine from '~/mine/mine';
@@ -109,6 +111,8 @@ class App extends Component {
                 <Switch>
                     <Route path="/home" component={Home} />
                     <Route path="/tsdr" component={Tsdr} />
+                    <Route path="/air" component={Air} />
+                    <Route path="/car" component={Car} />
                     <Route path="/discover" component={Discover} />
                     <Route path="/news" component={news} />
                     {/* <Route path="/reg" component={Reg} /> */}

@@ -18,3 +18,131 @@
         }
     }
 }
+.homeTsdr{
+    display: flex;
+    flex-direction: column;
+}
+.maintsdr{
+    width: 100%;
+    height: 14.513333rem;
+    overflow: auto;
+    padding: 0 .266667rem;
+    figure{
+        // height: 5.04rem;
+        margin-bottom: .4rem;
+        width:100%;
+        main{
+            height: 2.666667rem;
+            img{
+            height: 100%;
+            width: 2.666667rem;
+            float: left;
+            margin-right: .133333rem;
+        }
+        figcaption{
+            height: 100%;
+            .p1{
+                margin: 0;
+                b{
+                    font-size: .266667rem;
+                    font-weight: bolder;
+                    padding: 0 .266667rem;
+                }
+                span{
+                    color: gray;
+                }
+            }
+            .p2{
+                margin: .133333rem 0;
+                color: gray;
+                ul{
+                    li{
+                        margin: 0;
+                    }
+                }
+                em{
+                    color: yellow;
+                }
+            }
+            h5{
+                padding-right: .133333rem;
+                display: -webkit-box;
+                -webkit-box-orient: vertical;
+                -webkit-line-clamp: 3;
+                overflow: hidden;
+            }
+        }
+        }
+        
+        p{
+            margin-top: .2rem;
+            a{   
+                display: inline-block;
+                border: .013333rem solid grey;
+                border-radius: .266667rem;
+                padding: .133333rem .133333rem;
+                margin: 0 .066667rem;
+                color: #ccc;
+            }
+            .none{
+                display: none
+            }
+        }
+    }
+}
+.mainair{
+    width: 100%;
+    height: 14.513333rem;
+    overflow: auto;
+    padding: 0 .266667rem;
+    figure{
+        width: 100%;
+        margin-bottom: .266667rem;       
+        img{
+            width: 100%;
+            height: 5.333333rem;
+        }
+        figcaption{
+            position: relative;
+            margin-top: .266667rem;
+            .price{
+                // display: block;
+                color: #fff;
+                padding: .133333rem .666667rem;
+                position: absolute;
+                top:-50px;
+                left: 0;
+                background:#000;
+            }
+           main{
+               float: left;
+               .p1{
+                margin: 0 0 .133333rem;
+             }
+               .p2{
+                  margin: 0;
+                  color:grey;
+               }
+               .p3{
+                    ul{
+                        li{
+                            margin: 0;
+                        }
+                    }
+                }
+           }
+           a{
+               display: block;
+               float: right;
+               color:#333;
+               width: 1.333333rem;
+               img{
+                width: 1.333333rem;
+                height: 1.333333rem;
+                border-radius: 50%;
+                text-align: right;
+               }
+           }
+        }
+    }
+}

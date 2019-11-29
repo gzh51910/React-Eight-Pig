@@ -1,10 +1,17 @@
 .navhome{
     display: flex;
+    width: 100%;
     align-items: center;
+    // justify-content: space-between;
     height: 1.2rem;
+    position: relative;
     border-bottom: 1px solid #ccc;
     border-top: 1px solid #ccc;
+    .red{
+        color: #ff5e69;
+    }
     li{
+        width: 25%;
         height: 100%;
         line-height: 1.2rem ;
         flex: 1;
@@ -28,5 +35,45 @@
             margin-left: .08rem;
             vertical-align: middle;
         }
+               input{
+            border:none;
+            outline: none;
+        }
+        
+        
+    }
+    .menu{
+            position: absolute;
+            top:1.2rem;
+            background: #ff5e69;
+            width:100%;
+            z-index: 10;
+        }
+        
+}
+.ant-cascader-menus{
+    height: 9.6rem;
+    width:33.3%;
+    .ant-cascader-menu{
+        height: 9.6rem;
+        width: 100%;
+         background: rgba(252, 252, 250, 0.966);
+    }
+    li{
+        height: 1.2rem;
+        text-align: center;
+        line-height: 1.2rem;
+        font-size: .293333rem;
+        color: rgb(133, 130, 130);
+        border-right: .013333rem solid #ccc;
+        border-bottom: .013333rem solid #ccc;
+        .ant-cascader-menu-item-expand-icon{
+            display: none;
+        }
+       
+    }
+    .ant-cascader-menu-item-active{
+        background: #fff;
+        color: #ff5e69;
     }
 }

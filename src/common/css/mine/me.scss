@@ -1,0 +1,61 @@
+.minewrap{
+    width:100%;
+    background: rgb(252, 250, 250);
+    .top{
+        background: url('https://pic.8pig.com/img/h5/new/my/bg.png') 0 0 no-repeat;
+        width: 100%;
+        height: 3.466667rem;
+        background-size: cover;
+        .pic{
+            height: 100%;
+            float: left;
+            padding: .866667rem .533333rem;
+            img{
+                width: 1.733333rem;
+                border-radius: 50%;
+            }
+        }
+        .log{
+            padding-top: 1.2rem;
+            a{  
+                font-size: .666667rem;
+                color: #fff;
+            }
+        }
+    }
+    .menav{
+        height: 2.266667rem;
+        width:100%;
+        display: flex;
+        background: #fff;
+        li{
+            flex:1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            i{
+                font-size: .666667rem;
+                margin-bottom: .066667rem;
+            }
+        }
+    }
+    main{
+        
+        ul{
+           background: #fff;
+           margin-top: .666667rem;
+           li{
+               padding: 0 .4rem;
+               height: 1.333333rem;
+               line-height: 1.333333rem;
+               font-size: .466667rem;
+                i{
+                    float: right;
+                    line-height: 1.333333rem;
+                    font-size: .4rem;
+                }
+           }
+        }
+    }
+}

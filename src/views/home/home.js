@@ -23,11 +23,8 @@ class Home extends Component {
                         <Homeguide></Homeguide>
                         <Homemore />
                         <Homefoot></Homefoot>
-
                     </main>
-
                 </div>
-
             </div>
         )
     }

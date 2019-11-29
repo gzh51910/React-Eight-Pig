@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Route, Redirect, Switch, Link, NavLink, withRouter } from 'react-router-dom';
-import '../../common/css/home/homecatlist.scss'
+import '../../common/css/home/homecatlist.scss';
 import { my } from '../../api'
 class catList extends Component {
     state = {
@@ -23,8 +23,16 @@ class catList extends Component {
     goto = (text) => {
         if (text == '特色达人') {
             let { history } = this.props;
-            console.log(this.props);
+            // console.log(this.props);
             history.push('/tsdr')
+        }else if(text == '机场接送'){
+            let { history } = this.props;
+            // console.log(this.props);
+            history.push('/air')
+        }else if(text == '畅游包车'){
+            let { history } = this.props;
+            // console.log(this.props);
+            history.push('/car')
         }
 
     }
@@ -41,7 +49,7 @@ class catList extends Component {
                         </figcaption>
                     </figure>
                 })}
-
+                 
             </div>
         )
     }
