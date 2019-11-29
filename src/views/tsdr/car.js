@@ -2,15 +2,15 @@ import React, { Component } from 'react';
 import Nav from '../../components/common/navhome'
 import '../../common/css/home/tedr.scss';
 import {my} from '../../api'
-import Main from '../tsdr/main'
-class Tsdr extends Component {
+import Main from '../tsdr/airmain'
+class Car extends Component {
     state = {
         list: [
             {
                 text: '目的地'
             },
             {
-                text: '当地向导'
+                text: '一日游'
             },
             {
                 text: '综合排序'
@@ -19,30 +19,27 @@ class Tsdr extends Component {
                 text: '筛选'
             }
         ],
-        tslist:[]
-    }
-    del(item){
-        console.log('1111',item);
+        carlist:[]
     }
     async componentDidMount(){
         let {
             data: { data }
         } = await my.get("/HQ", {
-            team: "feature"
+            team: "bagcar"
         });
-        this.setState({tslist:data})
+        this.setState({carlist:data})
         console.log(data)
     }
     render() {
         return (
-            <div className="homeTsdr">
+            <div className="homeCar">
 
                 <Nav list={this.state.list}></Nav>
-                <Main list={this.state.tslist} del={this.del}></Main>
+                <Main list={this.state.carlist}></Main>
 
             </div>
         )
     }
 }
 
-export default Tsdr;
+export default Car;
