@@ -12,40 +12,31 @@
     font-size: .5rem; 
 }
 .ant-input{
-    width: 60%;
+    width: 70%;
     border: none;
 }
-.dq{
-    padding-left: .125rem;
-    color: #f00;
+.ant-btn-danger{
+    float: right;
 }
 .in{
     padding: .09375rem;
     border-bottom: .03rem solid rgb(235, 237, 240);
 }
-form{
+#app{
     width: 92%;
     margin: 0 4%;
+    margin: 0 auto;
 }
-.mima{
-    color: #ccc;
-    font-size: .35rem;
+.ant-input-group-addon{
+    border: none;
+    background: none;
 }
-
-.wc{
-    width: 100%;
-    background: #ccc;
-    color:#fff;
-}
-.fs{
-    float: right;
-    margin-top: -1rem;
-}
-.mimashuru{
-    width: 80%;
-}
-.xieyi{
+span{
     font-size: smaller;
-    margin-left: 2rem;
-    color: #ccc;
+    color: #eee;
+}
+p{
+    font-size: smaller;
+    color: #eee;
+    text-align: center;
 }

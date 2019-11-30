@@ -28,7 +28,7 @@ class Login extends Component{
   handleSubmit = e => {
     e.preventDefault();
     this.props.form.validateFields(async(err, values) => {
-      let { phone, password } = values
+      let { user, pwd } = values
       if (!err) {
         let {data} = await my.get("/login", {
           phone,
@@ -69,6 +69,7 @@ class Login extends Component{
     return (
       
       <Form onSubmit={this.handleSubmit} className="login-form">
+        
         {this.props.redirectTo&&this.props.redirectTo!=='/login'? <Redirect to={this.props.redirectTo} />:null}
         <div className="logheader">
         <Button type="link" className="goback" onClick={this.goBack}>
@@ -96,7 +97,7 @@ class Login extends Component{
             
             <Input
               prefix={<Icon type="lock" style={{ color: 'rgba(0,0,0,.25)' }} />}
-              type="password"
+              type="pwd"
               placeholder="请输入密码"
             />,
           )}
