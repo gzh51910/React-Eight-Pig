@@ -1,0 +1,72 @@
+.login-form {
+  max-width: 18.75rem;
+  margin: 0 auto;
+}
+
+.reg-form-a {
+  float: right;
+  font-size: smaller;
+  color: #ff5e69;
+}
+
+.login-form-button {
+  width: 100%;
+}
+
+.reg-form-button {
+  width: 100%;
+}
+
+.widthLength {
+  margin: 0 auto;
+}
+
+/* For demo */
+.car .ant-carousel .slick-slide {
+  text-align: center;
+  height: 10rem;
+  line-height: 10rem;
+  background: #364d79;
+  overflow: hidden;
+}
+
+.car .ant-carousel .slick-slide h3 {
+  color: #fff;
+}
+
+.logheader {
+  border-bottom: .03rem solid #ccc;
+}
+
+.login_header {
+  width: 83%;
+  height: 1.25rem;
+  line-height: 1.25rem;
+  text-align: center;
+  font-size: medium;
+  float: right;
+}
+
+.goback {
+  height: 1.25rem;
+  color: #ff5e69;
+  line-height: 1.25rem;
+  font-size: medium;
+  text-align: left;
+}
+
+.ant-input-affix-wrapper {
+  width: 80%;
+}
+
+.ant-form-item-control {
+  border-bottom: .03rem solid #ccc;
+}
+
+.ant-col:nth-child(2) {
+  border-bottom: none;
+}
+
+.reg-form-button {
+  background: #ff5e69;
+}

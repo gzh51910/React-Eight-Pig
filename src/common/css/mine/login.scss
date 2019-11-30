@@ -6,7 +6,7 @@
 .reg-form-a {
     float: right;
     font-size: smaller;
-    color: #f00;
+    color: #ff5e69;
 }
 .login-form-button {
     width: 100%;
@@ -44,7 +44,7 @@
   }
   .goback{
     height: 1.25rem;
-    color: #f00;
+    color: #ff5e69;
     line-height: 1.25rem;
     font-size: medium;
     text-align: left;
@@ -58,4 +58,7 @@
   }
   .ant-col:nth-child(2){
     border-bottom: none;
+  }
+  .reg-form-button{
+    background: #ff5e69;
   }
