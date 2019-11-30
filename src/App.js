@@ -9,7 +9,7 @@ import imgURL2 from './common/img/home/xiaoxi.svg';
 import imgURL6 from './common/img/home/xiaoxi1.svg';
 import imgURL3 from './common/img/home/wode.svg';
 import imgURL7 from './common/img/home/wode1.svg';
-import Tsdr from '~/tsdr/tedr';
+
 
 
 import Home from '~/home/home';
