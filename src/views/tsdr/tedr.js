@@ -39,9 +39,11 @@ class Tsdr extends Component {
     }
     render() {
         return (
-            <div className="homeTsdr">
+            <div className="homeTsdr">  
+                <div className="box">
                 <Nav listt={this.li} listtt={this.lis}  list={this.state.list}  setform={(form) => { this.form = form;this.setState({tslist:this.form }) }} setform1={(form1) => { this.form1 = form1;this.setState({tslist:this.form1 }) }}></Nav>
                 <Main list={this.state.tslist} del={this.del}></Main>
+                </div>
             </div>
         )
     }
