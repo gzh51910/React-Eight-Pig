@@ -23,9 +23,15 @@
 
 .minewrap .top .log {
   padding-top: 1.2rem;
+  float: left;
 }
 
-.minewrap .top .log a {
+.minewrap .top .log .homelog {
+  font-size: .666667rem;
+  color: #fff;
+}
+
+.minewrap .top .log .user {
   font-size: .666667rem;
   color: #fff;
 }
@@ -52,7 +58,7 @@
 
 .minewrap main ul {
   background: #fff;
-  margin-top: .666667rem;
+  margin-top: .516667rem;
 }
 
 .minewrap main ul li {
@@ -66,4 +72,11 @@
   float: right;
   line-height: 1.333333rem;
   font-size: .4rem;
+}
+
+.minewrap .ant-btn-block {
+  background: #888;
+  font-size: .533333rem;
+  margin: 0 .666667rem;
+  width: 85%;
 }

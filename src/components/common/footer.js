@@ -9,9 +9,6 @@ import imgURL2 from './common/img/home/xiaoxi.svg';
 import imgURL6 from './common/img/home/xiaoxi1.svg';
 import imgURL3 from './common/img/home/wode.svg';
 import imgURL7 from './common/img/home/wode1.svg';
-
-
-
 import Home from '~/home/home';
 import Discover from '~/discover/discover';
 import news from '~/news/news';
@@ -105,31 +102,9 @@ class App extends Component {
                             </figure>
                         })
                     }
-
-
                 </div>
-
-                <Switch>
-                    <Route path="/home" component={Home} />
-                    <Route path="/tsdr" component={Tsdr} />
-                    <Route path="/yzdr/:id" component={Yzdr} />
-                    <Route path="/air" component={Air} />
-                    <Route path="/car" component={Car} />
-                    <Route path="/discover" component={Discover} />
-                    <Route path="/news" component={news} />
-                    <Route path="/reg" component={Reg} />
-                    <Route path="/login" component={Login} />
-                    <Route path="/mine" component={Mine} />
-                    {/* <Route path="/goods/:id" component={Goods} /> */}
-                    <Route path="/notfound" render={() => <div>404页面</div>} />
-                    <Redirect from="/" to="/home" exact />
-                    <Redirect to="/notfound" />
-                </Switch>
-
             </div>
         )
     }
 }
-
-App = withRouter(App);
 export default App;

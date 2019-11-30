@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { PageHeader,label,Input,Icon, Button} from 'antd';
 // import {connect} from 'react-redux'
 import '../../common/css/mine/reg.scss';
-import {register} from '../../redux/user.redux';
 
 import {Redirect} from 'react-router-dom';
 // @connect(

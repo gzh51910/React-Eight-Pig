@@ -17,10 +17,16 @@
         }
         .log{
             padding-top: 1.2rem;
-            a{  
+            float: left;
+            .homelog{
                 font-size: .666667rem;
-                color: #fff;
-            }
+                    color: #fff;
+            }       
+            .user{                  
+                    font-size: .666667rem;
+                    color: #fff;                  
+            }  
+            
         }
     }
     .menav{
@@ -44,7 +50,7 @@
         
         ul{
            background: #fff;
-           margin-top: .666667rem;
+           margin-top: .516667rem;
            li{
                padding: 0 .4rem;
                height: 1.333333rem;
@@ -57,5 +63,11 @@
                 }
            }
         }
+    }
+    .ant-btn-block{
+        background: #888;
+        font-size: .533333rem;
+        margin: 0 .666667rem;
+        width: 85%;
     }
 }
