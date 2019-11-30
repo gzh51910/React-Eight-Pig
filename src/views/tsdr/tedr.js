@@ -19,27 +19,29 @@ class Tsdr extends Component {
                 text: '筛选'
             }
         ],
-        tslist:[]
+        tslist:[],
     }
     del(item){
         console.log('1111',item);
     }
     async componentDidMount(){
+
+        
         let {
             data: { data }
         } = await my.get("/HQ", {
             team: "feature"
         });
-        this.setState({tslist:data})
-        console.log(data)
+         this.li=data
+         let datas=JSON.stringify(data)
+         this.lis=JSON.parse(datas)
+        this.setState({tslist:data}) 
     }
     render() {
         return (
             <div className="homeTsdr">
-
-                <Nav list={this.state.list}></Nav>
+                <Nav listt={this.li} listtt={this.lis}  list={this.state.list}  setform={(form) => { this.form = form;this.setState({tslist:this.form }) }} setform1={(form1) => { this.form1 = form1;this.setState({tslist:this.form1 }) }}></Nav>
                 <Main list={this.state.tslist} del={this.del}></Main>
-
             </div>
         )
     }
