@@ -37,8 +37,10 @@ class Air extends Component {
 
         return (
             <div className="homeAir">
+                <div className="box">
                 <Nav list={this.state.list}></Nav>
                 <Main list={this.state.airlist} del={this.del}></Main>
+                </div>
             </div>
         )
     }

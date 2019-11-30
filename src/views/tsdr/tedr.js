@@ -36,10 +36,10 @@ class Tsdr extends Component {
     render() {
         return (
             <div className="homeTsdr">
-
+                <div className="box">
                 <Nav list={this.state.list}></Nav>
                 <Main list={this.state.tslist} del={this.del}></Main>
-
+                </div>
             </div>
         )
     }

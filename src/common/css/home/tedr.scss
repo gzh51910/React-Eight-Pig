@@ -1,4 +1,26 @@
 .homeTsdr{
     display: flex;
     flex-direction: column;
+    .box{
+        position: absolute;
+        z-index: 100;
+        background: #fff;
+        height: 100%;
+    }
+}
+.homeAir{
+    .box{
+        position: absolute;
+        z-index: 100;
+        background: #fff;
+        height: 100%;
+    }
+}
+.homeCar{
+    .box{
+        position: absolute;
+        z-index: 100;
+        background: #fff;
+        height: 100%;
+    }
 }

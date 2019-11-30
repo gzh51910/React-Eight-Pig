@@ -33,10 +33,10 @@ class Car extends Component {
     render() {
         return (
             <div className="homeCar">
-
+                <div className="box">
                 <Nav list={this.state.list}></Nav>
                 <Main list={this.state.carlist}></Main>
-
+                </div>
             </div>
         )
     }

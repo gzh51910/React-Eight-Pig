@@ -1,0 +1,21 @@
+.footsdr {
+    position: absolute;
+    bottom: 0;
+    z-index: 999;
+    height: 1.173333rem;
+    width: 100%;
+    background: #fff;
+    align-self:flex-end;
+
+    .ant-btn-group {
+        width: 100%;
+
+        .ant-btn {
+            background: #ff5f69;
+            border: none;
+            width: 50%;
+            height: 1.173333rem;
+        }
+    }
+
+}

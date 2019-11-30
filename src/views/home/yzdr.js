@@ -23,8 +23,8 @@ class homeyzdr extends Component {
     }
     goto =(id) => { 
         let { history } = this.props;
-            console.log(this.props);
             history.push(`/yzdr/${id}`)
+            console.log(this.props);
     }
     render() {
 
