@@ -1,66 +1,147 @@
 import React, { Component } from 'react';
-import { PageHeader,label,Input,Icon, Button} from 'antd';
-// import {connect} from 'react-redux'
+import {
+  Form,
+  Input,
+  Tooltip,
+  Icon,
+  Cascader,
+  Select,
+  Row,
+  Col,
+  Checkbox,
+  Button,
+  AutoComplete,
+  PageHeader
+} from 'antd';
 import '../../common/css/mine/reg.scss';
-import {register} from '../../redux/user.redux';
+import {my} from '../../api'
 
-import {Redirect} from 'react-router-dom';
-// @connect(
-//     state => state.phone,
-//     {register}
-// )
+const { Option } = Select;
+const AutoCompleteOption = AutoComplete.Option;
+
 
 class Reg extends Component {
-    constructor(props){
-        super(props);
-        this.state = {
-            phone:'',
-            pwd:'',
-            captcha:'',
-            // type:'genius',
-        }
-        this.handleRegister = this.handleRegister.bind(this)
+  state = {
+    confirmDirty: false,
+    autoCompleteResult: [],
+  };
 
-    }
-   
-    handleRegister(){
-        this.props.register(this.props.state)
-    }
-    handleChange(key,val){
-        this.setState({
-            [key]:val
-        })
-    }
-    render() {
-        return (
+  handleSubmit = e => {
+    e.preventDefault();
+    this.props.form.validateFieldsAndScroll(async(err, values) => {
+      let { phone, password ,captcha} = values
+      if (!err) {
+        let {data} = await my.get("/login", {
+          phone,
+          password,
+          captcha
+          })
+          this.props.history.push('/login')
+      }
+    });
+  };
 
-               <div>
-                    <PageHeader
-                        onBack={()=>history.back()}
-                        title="注册账号"
-                    />
-                    <br/>
-                    <form>
-                        <div className="in phone">
-                            <label className="dq">+86<Icon type="caret-down" /></label><Input onChange={value => this.handleChange('phone', value)} placeholder="请输入手机号" />
-                        </div>
-                        <div className="in captcha">
-                            <label>验证码</label><Input onChange={value => this.handleChange('captcha', value)} placeholder="请输入验证码" /><Button type="danger" className="fs">发送验证码</Button>
-                        </div>
-                        <div className="in password">
-                            <label>密码</label><Input onChange={value => this.handleChange('password', value)} placeholder="请设置6-16位登录密码" className="mimashuru"/>
-                        </div>
-                        
-                        <span className="mima">密码长度6～16位，由英文字母a～z (区分大小写)、数字0～9、至少两种特殊字符组成</span>
-                        
-                        <Button onClick={this.handleRegister} type="default" className="wc">完成</Button>
-                        
-                        <span className="xieyi">继续操作即代表您同意<a>《用户协议》</a></span>
-                    </form>
-               </div>
-        )
+  handleConfirmBlur = e => {
+    const { value } = e.target;
+    this.setState({ confirmDirty: this.state.confirmDirty || !!value });
+  };
+
+  compareToFirstPassword = (rule, value, callback) => {
+    const { form } = this.props;
+    if (value && value !== form.getFieldValue('password')) {
+      callback('Two passwords that you enter is inconsistent!');
+    } else {
+      callback();
     }
+  };
 
-}
+  render() {
+    const { getFieldDecorator } = this.props.form;
+    const { autoCompleteResult } = this.state;
 
-export default Reg;
+    const formItemLayout = {
+      labelCol: {
+        xs: { span: 24 },
+        sm: { span: 8 },
+      },
+      wrapperCol: {
+        xs: { span: 24 },
+        sm: { span: 16 },
+      },
+    };
+    const tailFormItemLayout = {
+      wrapperCol: {
+        xs: {
+          span: 24,
+          offset: 0,
+        },
+        sm: {
+          span: 16,
+          offset: 8,
+        },
+      },
+    };
+    const prefixSelector = getFieldDecorator('prefix', {
+      initialValue: '86',
+    })(
+      <Select style={{ width: 70 }}>
+        <Option value="86">+86</Option>
+        <Option value="87">+87</Option>
+      </Select>,
+    );
+
+    return (
+      <Form {...formItemLayout} onSubmit={this.handleSubmit}>
+        <PageHeader
+          onBack={()=>history.back()}
+          title="注册账号"
+        />
+        
+        <br/>
+        <Form.Item >账号
+          {getFieldDecorator('phone', {
+            // rules: [{ required: true, message: 'Please input your phone number!' }],
+          })(<Input addonBefore={prefixSelector} style={{ width: '70%' }} placeholder="请输入手机号"/>)}
+        </Form.Item>
+         <Form.Item >
+          <Row gutter={8}>
+            <Col span={14}>验证码
+              {getFieldDecorator('captcha', {
+                // rules: [{ required: true, }],
+                // value:123456
+              })(<Input placeholder="请输入验证码" />)}
+            </Col>
+            <Col span={9}>
+              <Button type="danger">发送验证码</Button>
+            </Col>
+          </Row>
+        </Form.Item>
+        <Form.Item hasFeedback>密码
+          {getFieldDecorator('password', {
+            // rules: [
+            //   {
+            //     required: true,
+                
+            //   },
+            //   {
+            //     validator: this.validateToNextPassword,
+            //   },
+            // ],
+          })(<Input.Password placeholder="请设置6-16位登录密码"/>)}
+        </Form.Item>
+        <span>密码长度6～16位，由英文字母a～z (区分大小写)、数字0～9、至少两种特殊字符组成</span>
+        
+        <Form.Item {...tailFormItemLayout}>
+          <Button type="default" htmlType="submit" style={{width:'100%',background:'#ccc'}}>
+            完成
+          </Button>
+        </Form.Item>
+        <p >继续操作即代表您同意<a>《用户协议》</a></p>
+      </Form>
+    );
+  }
+}(Form.create()(Reg))
+
+
+export default Form.create()(Reg);
+

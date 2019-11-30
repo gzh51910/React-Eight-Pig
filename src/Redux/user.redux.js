@@ -13,7 +13,7 @@ const initState={
     redirectTo:'',
     // isAuth:false,
     msg:'',
-    phone:'',
+    user:'',
     pwd:'',
     type:''
 }
