@@ -28,7 +28,7 @@ class Login extends Component{
   handleSubmit = e => {
     e.preventDefault();
     this.props.form.validateFields(async(err, values) => {
-      let { user, pwd } = values
+      let { phone, password } = values
       if (!err) {
         let {data} = await my.get("/login", {
           phone,
@@ -89,7 +89,7 @@ class Login extends Component{
             />,
           )}
         </Form.Item>
-        <Form.Item>
+        <Form.Item hasFeedback>
           <label>密码：</label>
           {getFieldDecorator('password', {
             rules: [{ required: true, message: '请输入密码！' }],
@@ -97,7 +97,7 @@ class Login extends Component{
             
             <Input
               prefix={<Icon type="lock" style={{ color: 'rgba(0,0,0,.25)' }} />}
-              type="pwd"
+              type="password"
               placeholder="请输入密码"
             />,
           )}
