@@ -2,18 +2,16 @@ import React, { Component } from 'react';
 
 
 class news extends Component {
+  
 
-    render() {
+  render() {
+    
 
-        return (
-            <div>
-                news
-
-            </div>
-        )
-    }
+    return (
+      <div>news</div>
+    )
+  }
 }
-
 
 
 export default news;

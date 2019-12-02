@@ -88,7 +88,7 @@ class Login extends Component{
             />,
           )}
         </Form.Item>
-        <Form.Item>
+        <Form.Item hasFeedback>
           <label>密码：</label>
           {getFieldDecorator('password', {
             rules: [{ required: true, message: '请输入密码！' }],
