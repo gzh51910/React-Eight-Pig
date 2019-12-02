@@ -13,5 +13,5 @@ render(
         </HashRouter>
      </Provider>
     ,
-    document.querySelector('#apps')
+    document.querySelector('#app')
 )
