@@ -28,7 +28,7 @@ class Login extends Component{
   handleSubmit = e => {
     e.preventDefault();
     this.props.form.validateFields(async(err, values) => {
-      let { user, pwd } = values
+      let { phone, password } = values
       if (!err) {
         let {data} = await my.get("/login", {
           phone,
@@ -36,7 +36,7 @@ class Login extends Component{
       })
         if(data.status==1){
           let user=data.data[0];
-          console.log(user);
+          // console.log(user);
           let {dispatch} =this.props;
           dispatch(login(user))
           localStorage.setItem('user',JSON.stringify(user));
@@ -97,7 +97,7 @@ class Login extends Component{
             
             <Input
               prefix={<Icon type="lock" style={{ color: 'rgba(0,0,0,.25)' }} />}
-              type="pwd"
+              type="password"
               placeholder="请输入密码"
             />,
           )}

@@ -18,6 +18,7 @@ import news from '~/news/news';
 import Reg from '~/reg/reg';
 import Login from '~/login/login';
 import Air from '~/tsdr/air';
+import Hdetail from './components/common/hdetail';
 import Car from '~/tsdr/car';
 import Mine from '~/mine/mine';
 import Tsdr from '~/tsdr/tedr';
@@ -114,6 +115,7 @@ class App extends Component {
                     <Route path="/tsdr" component={Tsdr} />
                     <Route path="/yzdr/:id" component={Yzdr} />
                     <Route path="/air" component={Air} />
+                    <Route path='/hdetail/:id' component={Hdetail} />
                     <Route path="/car" component={Car} />
                     <Route path="/discover" component={Discover} />
                     <Route path="/news" component={news} />

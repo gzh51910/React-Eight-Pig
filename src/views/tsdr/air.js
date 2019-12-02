@@ -21,9 +21,7 @@ class Air extends Component {
         ],
         airlist:[]
     }
-    del(item){
-        console.log('1111')
-    }
+   
     async componentDidMount(){
         let {
             data: { data }
@@ -31,7 +29,7 @@ class Air extends Component {
             team: "airport"
         });
         this.setState({airlist:data})
-        console.log(data)
+       
     }
     render() {
 
@@ -39,7 +37,7 @@ class Air extends Component {
             <div className="homeAir">
                 <div className="box">
                 <Nav list={this.state.list}></Nav>
-                <Main list={this.state.airlist} del={this.del}></Main>
+                <Main list={this.state.airlist}></Main>
                 </div>
             </div>
         )

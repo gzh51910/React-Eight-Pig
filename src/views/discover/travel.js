@@ -16,7 +16,7 @@ class Travel extends Component {
             alignItems: "flex-end"
           }}
         >
-          <span style={{ fontSize: "20px", fontWeight: 600 }}>达人视频</span>
+          <span className='Ttitle' style={{ fontSize: "20px", fontWeight: 600 }}>达人视频</span>
           <span style={{ color: "#ccc", lineHeight: "100%" }}>
             更多
             <Icon type="right" />
@@ -31,7 +31,7 @@ class Travel extends Component {
             margin:'15px 0'
           }}
         >
-          <span style={{ fontSize: "20px", fontWeight: 600 }}>游客故事</span>
+          <span className='Ttitle' style={{ fontSize: "20px", fontWeight: 600 }}>游客故事</span>
           <span style={{ color: "#ccc", lineHeight: "100%" }}>
             更多
             <Icon type="right" />
@@ -46,7 +46,7 @@ class Travel extends Component {
             margin:'15px 0'
           }}
         >
-          <span style={{ fontSize: "20px", fontWeight: 600 }}>达人故事</span>
+          <span className='Ttitle' style={{ fontSize: "20px", fontWeight: 600 }}>达人故事</span>
           <span style={{ color: "#ccc", lineHeight: "100%" }}>
             更多
             <Icon type="right" />
@@ -61,7 +61,7 @@ class Travel extends Component {
             margin:'15px 0'
           }}
         >
-          <span style={{ fontSize: "20px", fontWeight: 600 }}>新鲜事</span>
+          <span className='Ttitle' style={{ fontSize: "20px", fontWeight: 600 }}>新鲜事</span>
           <span style={{ color: "#ccc", lineHeight: "100%" }}>
             更多
             <Icon type="right" />

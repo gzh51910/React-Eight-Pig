@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Route, Redirect, Switch, Link, NavLink, withRouter } from 'react-router-dom';
+import { withRouter } from 'react-router-dom';
 import '../../common/css/home/homecatlist.scss';
 import { my } from '../../api'
 class catList extends Component {

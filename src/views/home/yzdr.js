@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import '../../common/css/home/homeyzdr.scss'
-import { Route, Redirect, Switch, Link, NavLink, withRouter } from 'react-router-dom';
+import { withRouter } from 'react-router-dom';
 import { Icon } from 'antd';
 import { my } from '../../api'
 class homeyzdr extends Component {

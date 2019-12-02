@@ -25,6 +25,10 @@
   overflow: auto;
 }
 
+.mainWrap .Ttitle {
+  color: #000;
+}
+
 .travelwrap {
   display: flex;
   flex-direction: column;
@@ -81,4 +85,58 @@
 
 .video-box .Imgnone {
   display: none;
+}
+
+.drwrap {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+}
+
+.drwrap figure {
+  width: 100%;
+  margin-bottom: .666667rem;
+}
+
+.drwrap figure p {
+  color: #000;
+  text-align: left;
+  margin: 0;
+}
+
+.drwrap figure .dname {
+  width: 100%;
+}
+
+.drwrap figure .dname .tpic {
+  width: 1.333333rem;
+  float: left;
+  border-radius: 50%;
+}
+
+.drwrap figure .dname .name {
+  font-size: .4rem;
+}
+
+.drwrap figure .dname .time {
+  color: #888;
+}
+
+.drwrap figure figcaption {
+  margin-top: .4rem;
+  width: 100%;
+}
+
+.drwrap figure figcaption ul {
+  width: 100%;
+}
+
+.drwrap figure figcaption ul li {
+  float: left;
+  width: 30%;
+  margin: .133333rem 3% 0 0;
+}
+
+.drwrap figure figcaption ul li img {
+  width: 100%;
 }

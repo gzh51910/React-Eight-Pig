@@ -1,0 +1,31 @@
+.Dwrap{
+   width:100%;
+   main{
+       padding: .2rem;
+   }
+   p{
+       color: #000;
+       margin: 0;
+       text-align-last: left;
+   }
+   .dpic{
+       height: 9.333333rem;
+       width: 100%
+   }
+   .title{
+       .ti{
+           font-size: .4rem;
+        //    color: #000;
+       }
+       span{
+           color: #888;
+       }
+   }
+   .name{
+       img{
+           width: 2rem;
+           border-radius: 50%;
+           float: right;
+       }
+   }
+}

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Nav from '../../components/common/navhome'
+import Nav from '../../components/common/tsnav'
 import '../../common/css/home/tedr.scss';
 import {my} from '../../api'
 import Main from '../tsdr/main'

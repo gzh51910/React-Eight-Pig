@@ -56,6 +56,10 @@
   margin-bottom: .066667rem;
 }
 
+.minewrap .menav li span {
+  color: #888;
+}
+
 .minewrap main ul {
   background: #fff;
   margin-top: .516667rem;

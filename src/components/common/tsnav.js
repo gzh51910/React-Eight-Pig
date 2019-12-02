@@ -2,11 +2,16 @@ import React, { Component } from "react";
 import "../../common/css/home/nav.scss";
 import { my } from "../../api";
 import { Cascader } from "antd";
+import PropTypes from 'prop-types'
 
+class Tsnav extends Component {
+      static propTypes = {
+        listt: PropTypes.array.isRequired,
+        listtt: PropTypes.array.isRequired,
+        setform: PropTypes.func.isRequired,
+        setform1: PropTypes.func.isRequired
+    }
 
-
-class Nav extends Component {
-   
   state = {
     isActive:false,
     options: [],
@@ -15,6 +20,9 @@ class Nav extends Component {
   };
 
   async componentDidMount() {
+
+    
+   
     let {
       data: { data }
     } = await my.get("/HQ", {
@@ -34,12 +42,39 @@ class Nav extends Component {
       })
     }
   }
-  
+  compareup=(prop)=> {
+    return function(obj1, obj2) {
+    var val1 = obj1[prop];
+    var val2 = obj2[prop];
+    if (!isNaN(Number(val1)) && !isNaN(Number(val2))) {
+    val1 = Number(val1);
+    val2 = Number(val2);
+    }
+    if (val1 < val2) {
+    return -1;
+    } else if (val1 > val2) {
+    return 1;
+    } else {
+    return 0;
+    }
+    };
+    }
   changeActive=(item)=>{
     this.setState({
       isActive:false
     })
-    
+    if(item=='评论多到少'){
+      let { listt} = this.props
+
+      let newlist=listt.sort(this.compareup('comment'))
+      let big=newlist.reverse()
+
+      this.props.setform(big)
+    }else if(item=='综合排序'){
+      let {listtt} = this.props
+    //   console.log(listtt);
+      this.props.setform1(this.props.listtt)
+    }
 
   }
   render() {
@@ -57,7 +92,7 @@ class Nav extends Component {
               options={this.state.options}            
                placeholder="目的地"
             />
-            {/* <div className='menu'>1111</div> */}
+           
           </li>
           <li className="red">
             {list[1].text}
@@ -69,7 +104,6 @@ class Nav extends Component {
             >
               <path d="M525.347 748.235l471.775-471.777H27.528z"></path>
             </svg>
-            {/* <div className='menu'>1111</div> */}
           </li>
           <li onClick={this.active}>
             综合排序
@@ -93,23 +127,7 @@ class Nav extends Component {
             >
               <path d="M525.347 748.235l471.775-471.777H27.528z"></path>
             </svg>
-            {/* <div className='menu'>1111</div> */}
           </li>
-          {/* {list.map((item, idx) => {
-            return (
-              <li key={item.text} className={idx == 1 ? "red" : ""}>
-                {item.text}
-                <svg
-                  className="sj"
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 1024 1024"
-                  id="triangle"
-                >
-                  <path d="M525.347 748.235l471.775-471.777H27.528z"></path>
-                </svg>
-              </li>
-            );
-          })} */}
         </ul>
         <div className="sort" style={this.state.isActive?{display:'block'}:{display:'none'}}>
              {
@@ -123,4 +141,4 @@ class Nav extends Component {
   }
 }
 
-export default Nav;
+export default Tsnav;

@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Icon } from "antd";
 import Dmove from "./dmove";
+import Drstate from './drstate'
 class Dynamic extends Component {
   render() {
     return (
@@ -12,7 +13,7 @@ class Dynamic extends Component {
             alignItems: "flex-end"
           }}
         >
-          <span style={{ fontSize: "20px", fontWeight: 600 }}>直播</span>
+          <span className='Ttitle' style={{ fontSize: "20px", fontWeight: 600 }}>直播</span>
           <span style={{ color: "#ccc", lineHeight: "100%" }}>
             更多
             <Icon type="right" />
@@ -20,6 +21,7 @@ class Dynamic extends Component {
         </p>
         <Dmove/>
         <Dmove/>
+        <Drstate/>
       </div>
     );
   }
