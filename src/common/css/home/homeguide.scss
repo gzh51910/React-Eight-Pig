@@ -16,14 +16,13 @@
             white-space: nowrap;
             color: #333;
             margin: .09333rem  0;
-         
-            // padding: 0 .4rem;
-         
             text-align: center;
             font-size: .37333rem;
-    margin-right: 1.333333rem;
+            margin-right: 1.333333rem;
+            span{
+                color: #333;
+            }
             .isActive{
-                
                 padding-bottom: .026667rem;
                 color: #ff5e69;
                 border-bottom: 2px solid #ff5e69;
