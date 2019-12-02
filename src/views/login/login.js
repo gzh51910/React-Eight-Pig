@@ -1,7 +1,6 @@
 import React,{Component} from 'react';
 import { Form, Icon, Input, Button } from 'antd';
 import '../../common/css/mine/login.scss';
-import { NavLink,Route, Switch } from 'react-router-dom';
 import { my } from '../../api';
 import {Redirect} from 'react-router-dom'
 import {connect} from 'react-redux'
