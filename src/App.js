@@ -15,6 +15,7 @@ import imgURL7 from './common/img/home/wode1.svg';
 import Home from '~/home/home';
 import Discover from '~/discover/discover';
 import news from '~/news/news';
+import New from '~/news/new';
 import Reg from '~/reg/reg';
 import Login from '~/login/login';
 import Air from '~/tsdr/air';
@@ -29,7 +30,7 @@ class App extends Component {
         isActive: false,
         menu: [
             {
-                isActive: true,
+                isActive: false,
                 name: 'home',
                 path: '/home',
                 src: imgURL,
@@ -61,9 +62,20 @@ class App extends Component {
             },
         ]
     }
-
+    componentDidMount() {
+        console.log(this.props);
+        let { history } = this.props;
+        let list = this.state.menu.map((item, index) => {
+            if (item.path === history.location.pathname) {
+                item.isActive = true
+            }
+            return item
+        })
+        this.setState({
+            menu: list
+        })
+    }
     goto = (path, idx) => {
-
         let { history } = this.props;
         history.push(path)
         let list = this.state.menu.map((item, index) => {
@@ -112,6 +124,7 @@ class App extends Component {
                 <Switch>
                     <Route path="/home" component={Home} />
                     <Route path="/tsdr" component={Tsdr} />
+                    <Route path="/new" component={New} />
                     <Route path="/yzdr/:id" component={Yzdr} />
                     <Route path="/air" component={Air} />
                     <Route path="/car" component={Car} />

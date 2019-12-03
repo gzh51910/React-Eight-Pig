@@ -1,0 +1,51 @@
+.ant-page-header {
+  height: 1.4rem;
+  border-bottom: 0.03rem solid #ebedf0;
+  padding: .09375rem;
+}
+
+.ant-page-header-heading {
+  margin: 0;
+}
+
+.ant-page-header-heading-title {
+  text-align: center;
+  font-size: .5rem;
+}
+
+.ant-input {
+  width: 70%;
+  border: none;
+}
+
+.ant-btn-danger {
+  float: right;
+}
+
+.in {
+  padding: .09375rem;
+}
+
+.ant-form {
+  width: 92%;
+  margin: 0 4%;
+  margin: 0 auto;
+}
+
+.ant-input-group-addon {
+  border: none;
+  background: none;
+}
+
+.regp {
+  font-size: .26667rem;
+  text-align: center;
+}
+
+.wancheng {
+  margin-top: 0.48rem;
+  height: 1.333333rem;
+  color: #bbb;
+  background-color: #ddd;
+  font-size: .48rem;
+}

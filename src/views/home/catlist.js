@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import { Route, Redirect, Switch, Link, NavLink, withRouter } from 'react-router-dom';
 import '../../common/css/home/homecatlist.scss';
 import { my } from '../../api'
+import Lazyload from 'r-img-lazyload';
+import imgURL from '../../common/img/home/loading.jpg';
 class catList extends Component {
     state = {
         list: [
@@ -25,11 +27,11 @@ class catList extends Component {
             let { history } = this.props;
             // console.log(this.props);
             history.push('/tsdr')
-        }else if(text == '机场接送'){
+        } else if (text == '机场接送') {
             let { history } = this.props;
             // console.log(this.props);
             history.push('/air')
-        }else if(text == '畅游包车'){
+        } else if (text == '畅游包车') {
             let { history } = this.props;
             // console.log(this.props);
             history.push('/car')
@@ -37,19 +39,26 @@ class catList extends Component {
 
     }
     render() {
+        const config = {
+            options: {
 
+                loading: imgURL
+            },
+        };
         return (
             <div className="catlist">
 
                 {this.state.list.map(item => {
                     return <figure className="list" key={item.text} onClick={this.goto.bind(this, item.text)}>
-                        <img src={item.src} />
+
+                        <Lazyload src={item.src} {...config} />
+
                         <figcaption>
                             {item.text}
                         </figcaption>
                     </figure>
                 })}
-                 
+
             </div>
         )
     }

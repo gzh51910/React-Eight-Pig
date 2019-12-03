@@ -5,7 +5,7 @@
   height: 1.2rem;
   position: relative;
   border-bottom: 1px solid #ccc;
-  border-top: 1px solid #ccc;
+  margin-bottom: 0;
 }
 
 .navhome .red {
@@ -21,16 +21,6 @@
   text-align: center;
   color: #888;
   position: relative;
-}
-
-.navhome li:not(:last-child):after {
-  content: "";
-  width: .02667rem;
-  background-color: #ccc;
-  position: absolute;
-  right: 0;
-  top: 20%;
-  bottom: 20%;
 }
 
 .navhome li .sj {
@@ -82,4 +72,21 @@
 .ant-cascader-menus .ant-cascader-menu-item-active {
   background: #fff;
   color: #ff5e69;
+}
+
+.sortnav .sort {
+  position: absolute;
+  top: 1.2rem;
+  width: 100%;
+  background-color: white;
+  z-index: 111111;
+  font-size: .42667rem;
+}
+
+.sortnav .sort p {
+  margin: 0;
+  height: 1.28rem;
+  line-height: 1.28rem;
+  text-align: center;
+  border-bottom: 1px solid #ccc;
 }

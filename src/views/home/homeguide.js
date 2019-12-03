@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import '../../common/css/home/homeguide.scss'
 import { Tabs } from 'antd';
 import { my } from '../../api'
+import Lazyload from 'r-img-lazyload';
+import imgURL from '../../common/img/home/loading.jpg';
 class homeguide extends Component {
     state = {
         list: [
@@ -70,7 +72,12 @@ class homeguide extends Component {
 
     }
     render() {
+        const config = {
+            options: {
 
+                loading: imgURL
+            },
+        };
         return (
             <div className="homeguide">
                 <h1 className="title">优质达人带你玩</h1>
@@ -87,7 +94,7 @@ class homeguide extends Component {
                     {
                         this.state.menu1.map((item, index) => {
                             return <dd key={item.name} >
-                                <img src={item.src} />
+                                <Lazyload src={item.src}   {...config}/>
                                 <p>{item.name}</p>
                                 <span className="g-price">{item.price}</span>
                                 <span className="g-rate">{item.rate}<span className="g-warn" >{item.warn}</span></span>
