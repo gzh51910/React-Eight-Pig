@@ -3,6 +3,8 @@ import '../../common/css/home/homeyzdr.scss'
 import { withRouter } from 'react-router-dom';
 import { Icon } from 'antd';
 import { my } from '../../api'
+import Lazyload from 'r-img-lazyload';
+import imgURL from '../../common/img/home/loading.jpg';
 class homeyzdr extends Component {
     state = {
         list: [
@@ -21,13 +23,18 @@ class homeyzdr extends Component {
         })
 
     }
-    goto =(id) => { 
+    goto = (id) => {
         let { history } = this.props;
-            history.push(`/yzdr/${id}`)
-            console.log(this.props);
+        history.push(`/yzdr/${id}`)
+        console.log(this.props);
     }
     render() {
+        const config = {
+            options: {
 
+                loading: imgURL
+            },
+        };
         return (
             <div className="homeyzdr">
                 <div className="titleBox">
@@ -39,8 +46,10 @@ class homeyzdr extends Component {
                 <article className="g-list-wrap">
                     <ul className='g-list'>
                         {this.state.list.map(item => {
-                            return <figure key={item.src} onClick={this.goto.bind(this,item._id)}>
-                                <img src={item.src} />
+                            return <figure key={item.src} onClick={this.goto.bind(this, item._id)}>
+
+                                <Lazyload src={item.src} {...config} />
+
                                 <span className="g-tag">{item.tag}</span>
                                 <figcaption>
                                     <h3>{item.name}</h3>
