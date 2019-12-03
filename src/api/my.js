@@ -2,7 +2,7 @@ import axios from 'axios';
 
 // 创建axios实例
 const my = axios.create({
-    baseURL: 'http://10.3.136.163:4869'
+    baseURL: 'http://10.3.136.4:4869'
 });
 
 function get(path, params, config = {}) {

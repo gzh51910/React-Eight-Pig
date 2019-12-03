@@ -38,9 +38,14 @@ module.exports = {
                 include: path.join(__dirname, './src')
             },
             {
+                // test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,
+                // use: ['url-loader'],
                 test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,
-                use: ['url-loader'],
-
+                loader: 'url-loader',
+                options: {
+                  limit: 10000,
+                  name: 'img/[name].[hash:5].[ext]'
+                }
             },
 
             // css加载器
