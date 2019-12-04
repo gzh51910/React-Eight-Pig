@@ -10,11 +10,11 @@
    }
    .dpic{
        height: 9.333333rem;
-       width: 100%
+       width: 100%;
    }
    .title{
-       .ti{
-           font-size: .4rem;
+       .t{
+           font-size: .533333rem;
         //    color: #000;
        }
        span{
@@ -22,10 +22,50 @@
        }
    }
    .name{
+       height: 2rem;
        img{
            width: 2rem;
            border-radius: 50%;
            float: right;
        }
+       .star{
+        width: 50%;
+        margin-top: .4rem;
+        float: left;
+           ul{
+           width: 100%;
+           margin-top: .133333rem;
+                li{
+                margin: 0;
+            }  
+       }
+       
+       }      
    }
+   .a{
+           margin-top: .4rem;
+        //    clear: both;
+        text-align: center;
+           a{
+               padding: .2rem .266667rem;
+               color: #888;
+               border: .013333rem solid #888;
+               border-radius: .266667rem;
+               margin: 0 .266667rem;
+           }
+       }
+       .Dnav{
+           margin-top: .4rem;
+           display: flex;
+           justify-content: space-around;
+           li{
+               margin: .133333rem 1.5%;
+               padding: .4rem 0;
+               text-align: center;
+           }
+           .dactive{
+               color: #ff5e69;
+               border-bottom: .04rem solid #ff5e69
+           }
+       }
 }

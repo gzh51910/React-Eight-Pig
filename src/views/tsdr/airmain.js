@@ -4,7 +4,8 @@ import '../../common/css/home/tsdrmain.scss';
 import { Rate,Icon } from 'antd';
 class Airmain extends Component{
     go(id){
-        this.props.history.replace('/hdetail/'+id);
+        let {pathname}=this.props.location;
+        this.props.history.replace('/hdetail/'+id+pathname);
     }
     render(){
         let {list}=this.props;
