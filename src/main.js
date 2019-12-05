@@ -1,6 +1,6 @@
 import React from 'react';
 import { render } from 'react-dom';
-import { HashRouter } from 'react-router-dom'
+import { HashRouter, BrowserRouter} from 'react-router-dom'
 import { Provider } from 'react-redux';
 import './common/js/rem'
 import App from './App';
@@ -8,9 +8,9 @@ import store from './store/index'
 
 render(
     <Provider store={store}>
-        <HashRouter>
+        <BrowserRouter>
             <App />
-        </HashRouter>
+        </BrowserRouter>
      </Provider>
     ,
     document.querySelector('#app')
