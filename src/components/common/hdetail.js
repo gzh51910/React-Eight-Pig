@@ -11,7 +11,7 @@ class Hdetail extends Component {
     console.log('5550',this.props)
     let { id ,type} = this.props.match.params;
     // let  {pathname} =this.props.location;
-    if(type=='air'){
+    if(type=='port'){
       let {
       data:{data}
     } = await my.get("/air", { _id: id });

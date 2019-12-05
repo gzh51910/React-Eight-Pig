@@ -102,7 +102,7 @@ class Login extends Component{
           )}
         </Form.Item>
         <Form.Item>
-          <a className="reg-form-a" href="">
+          <a className="reg-form-a">
             短信验证登录
           </a>
           <Button type="" htmlType="submit" className="login-form-button" ref='sub'>

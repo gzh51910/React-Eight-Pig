@@ -1,6 +1,10 @@
 .minewrap{
     width:100%;
     background: rgb(252, 250, 250);
+    height: 16rem;
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
     .top{
         background: url('https://pic.8pig.com/img/h5/new/my/bg.png') 0 0 no-repeat;
         width: 100%;

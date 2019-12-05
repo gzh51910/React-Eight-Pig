@@ -30,7 +30,7 @@ class catList extends Component {
         } else if (text == '机场接送') {
             let { history } = this.props;
             // console.log(this.props);
-            history.push('/air')
+            history.push('/port')
         } else if (text == '畅游包车') {
             let { history } = this.props;
             // console.log(this.props);

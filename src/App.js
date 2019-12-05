@@ -127,7 +127,7 @@ class App extends Component {
                     <Route path="/tsdr" component={Tsdr} />
                     <Route path="/new" component={New} />
                     <Route path="/yzdr/:id" component={Yzdr} />
-                    <Route path="/air" component={Air} />
+                    <Route path="/port" component={Air} />
                     <Route path='/hdetail/:id/:type' component={Hdetail} />
                     <Route path="/car" component={Car} />
                     <Route path="/discover" component={Discover} />

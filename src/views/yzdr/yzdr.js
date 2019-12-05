@@ -12,6 +12,7 @@ class tedr extends Component {
 
     }
     async componentDidMount() {
+        
         let { id } = this.props.match.params;
         console.log(id);
         let {
