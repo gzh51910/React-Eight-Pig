@@ -2,9 +2,13 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const path = require('path');
 module.exports = {
     entry: './src/main.js',
+    output:{
+        publicPath:"./"
+    },
     devServer: {
         contentBase: path.join(__dirname, './public'),
         port: 8010
+    
     },
     resolve: {
         // 别名
